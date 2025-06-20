@@ -61,7 +61,7 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app,post('/logout', (req, res) => {
+app, post('/logout', (req, res) => {
     req.session.destory(err => {
         if (err) {
             console.error('Logout eror:', err);
