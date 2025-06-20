@@ -25,7 +25,9 @@ function requireLogin(req, res, next){
 }
 
 // Handle the login form
-app.post('/login, async (req, res)')
+app.post('/login', async (req, res) => {
+    const {u}
+})
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
