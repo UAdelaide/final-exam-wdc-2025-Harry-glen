@@ -58,7 +58,6 @@ app.post('/login', async (req, res) => {
         console.error(err);
         return res.status(500).send('Server error');
     }
-}
 });
 
 
