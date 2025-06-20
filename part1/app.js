@@ -128,14 +128,12 @@ async function main() {
                 LEFT JOIN WalkApplications wa
                     ON wa.walker_id = u.user_id
                 LEFT JOIN WalkRequests wr
-                    ON wa.request_id = wr.user_id
+                    ON wa.request_id = wr.request_id
+                        AND wr.status = 'completed
+                    
                 LEFT
 
             `);
             res.json(rows);
         } catch (err) {
-            res.status(500).json({ error: err.message});
-
-        }
-    });
-}
+            res.status(500).json({ error: err.messag
