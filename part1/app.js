@@ -130,7 +130,9 @@ async function main() {
                 LEFT JOIN WalkRequests wr
                     ON wa.request_id = wr.request_id
                         AND wr.status = 'completed
-                LEFT JOIN WalkRatings
+                LEFT JOIN WalkRatings wr2
+                    ON wr2.walker_id = u.user_id
+                    
 
             `);
             res.json(rows);
