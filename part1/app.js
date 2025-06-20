@@ -49,7 +49,7 @@ async function main() {
             'Tiny',
             'large'
             )
-        ON DUPLICATE KEY UPDATE name = username;
+        ON DUPLICATE KEY UPDATE name = name;
     `);
 
     await connection.query(`
@@ -88,7 +88,7 @@ async function main() {
             120,
             'CBD',
             'cancelled'
-        );
+        )ON DUPLICATE KEY UPDATE username = username;
     `);
 
     // set up express
