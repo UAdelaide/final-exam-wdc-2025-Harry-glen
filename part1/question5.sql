@@ -53,13 +53,13 @@ VALUES(
     ),
     (
         (SELECT dog_id FROM Dogs WHERE name='Roxy'),
-    '2025-06-10 09:30:00',
+    '2024-06-10 16:30:00',
     55,
     'Golden Rd',
-    'com'
+    'completed'
     ),
     (
-        (SELECT dog_id FROM Dogs WHERE name='name'),
+        (SELECT dog_id FROM Dogs WHERE name='Tiny'),
     'datetime',
     1,
     'location'
