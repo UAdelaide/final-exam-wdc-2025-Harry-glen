@@ -15,6 +15,31 @@ VALUES (
     'dogname',
     'medium'
 );
+VALUES (
+    (SELECT user_id FROM Users WHERE username='name'),
+    'dogname',
+    'medium'
+);
+VALUES (
+    (SELECT user_id FROM Users WHERE username='name'),
+    'dogname',
+    'medium'
+);
+VALUES (
+    (SELECT user_id FROM Users WHERE username='name'),
+    'dogname',
+    'medium'
+);
+VALUES (
+    (SELECT user_id FROM Users WHERE username='name'),
+    'dogname',
+    'medium'
+);
+VALUES (
+    (SELECT user_id FROM Users WHERE username='name'),
+    'dogname',
+    'medium'
+);
 
 -- 5 wlak requests
-INSERT INTO 
+INSERT INTO
