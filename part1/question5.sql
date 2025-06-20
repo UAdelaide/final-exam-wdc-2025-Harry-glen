@@ -25,6 +25,7 @@ VALUES (
     'dogname',
     'medium'
     ),
+    (
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
     'medium'
