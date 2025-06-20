@@ -48,6 +48,7 @@
         <div class="dog-container" v-if="dogImageUrl">
             <img :src="dogImageUrl" />
         </div>
+        <p></p>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
