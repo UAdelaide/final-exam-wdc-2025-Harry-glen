@@ -64,10 +64,11 @@
           }
         }
 
+        // to get the current user 
         async function getCurrentUser() {
             const res = await fetch('/api/user/me');
             if (!res.ok) throw new Error('Not logged in');
-            currentUser.value = await res
+            currentUser.value = await res.json();
         }
 
         async function applyToWalk(requestId) {
@@ -90,6 +91,7 @@
         }
 
         onMounted(() => {
+          getCurrentUser();
           loadWalkRequests();
         });
 
