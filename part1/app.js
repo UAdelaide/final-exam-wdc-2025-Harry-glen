@@ -96,7 +96,8 @@ async function main() {
     app.get('/api/dogs', async (req, res) => {
         try{
             const [rows] = await connection.query(`
-
+                SELECT
+                    d.name  AS dog_name
                 `)
         }
     })
