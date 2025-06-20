@@ -29,7 +29,9 @@ function requireLogin(req, res, next){
 
 // Handle the login form
 app.post('/login', async (req, res) => {
-    const { username, password }
+    const { username, password } = req.body;
+
+    try{
     const [rows] = await db.query(
         'SELECT user_id, role, password_hash FROM Users WHERE username = ?',
         [username]
