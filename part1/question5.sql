@@ -20,14 +20,14 @@ VALUES (
     'small'
     ),
     (
-    (SELECT user_id FROM Users WHERE username='dave'),
-    'dogname',
+    (SELECT user_id FROM Users WHERE username='dave234'),
+    'Roxy',
     'medium'
     ),
     (
-    (SELECT user_id FROM Users WHERE username='name'),
+    (SELECT user_id FROM Users WHERE username='carol123'),
     'dogname',
-    'medium'
+    'small'
     ),
     (
     (SELECT user_id FROM Users WHERE username='name'),
