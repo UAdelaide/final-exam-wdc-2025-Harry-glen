@@ -42,6 +42,8 @@ app.post('/login', async (req, res) => {
         if (!rows.length) {
             return res.send('Invalid login');
         }
+        console.log('rows:', rows);
+
 
         const user = rows[0];
         const match = await bcrypt.compare(password, user.password_hash);
