@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // Session setup
 app.use(session({
-    
+    secret: process.env.SESSION_S
 }))
 
 // Routes
