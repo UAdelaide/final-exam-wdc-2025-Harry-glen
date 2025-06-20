@@ -60,9 +60,9 @@ VALUES(
     ),
     (
         (SELECT dog_id FROM Dogs WHERE name='Tiny'),
-    '2025-06-10 09:30:00',
-    1,
-    'location',
+    '2025-06-10 08:30:00',
+    5,
+    'Salty Springs',
     'open'
     ),
     (
