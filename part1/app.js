@@ -100,7 +100,7 @@ async function main() {
         try{
             const [rows] = await connection.query(`
                 SELECT
-                    d.name  AS dog_name
+                    d.name  AS dog_name,
                     d.size,
                     u.username AS owner_username
                 FROM Dogs d
@@ -119,7 +119,7 @@ async function main() {
             const [rows] = await connection.query(`
                 SELECT
                     wr.request_id
-                    d,name      AS dog_name
+                    d,name      AS dog_name,
                     wr.requested_time,
                     wr.duration_minutes,
                     wr.location,
