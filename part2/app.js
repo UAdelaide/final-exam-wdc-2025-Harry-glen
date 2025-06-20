@@ -42,7 +42,7 @@ app.post('/login', async (req, res) => {
     }
 
     // save to session
-    r
+    req.session.user = {}
 })
 
 // Routes
