@@ -66,9 +66,9 @@ VALUES(
     'open'
     ),
     (
-        (SELECT dog_id FROM Dogs WHERE name='name'),
+        (SELECT dog_id FROM Dogs WHERE name='Beast'),
     'datetime',
     1,
-    'location'
-    ''
+    'CBD',
+    'cancelled'
     );
