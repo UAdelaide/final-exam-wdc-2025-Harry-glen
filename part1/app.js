@@ -105,9 +105,10 @@ async function main() {
             `);
             res.json(rows);
         } catch (err) {
-            res.status(500)
+            res.status(500).json({ error: err.message});
+
         }
-        }
+
     })
 
 }
