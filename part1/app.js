@@ -167,6 +167,7 @@ async function main() {
     });
 }
 main().catch(err => {
-    cosn
+    console.error('Failed to start app:', err);
+    pr
 })
 }
