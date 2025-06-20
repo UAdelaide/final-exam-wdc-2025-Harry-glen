@@ -125,7 +125,7 @@ async function main() {
     });
 
     // GET  /api/walkreuqests/open
-        app.get('/api/walkreuqests/open', async (req, res) => {
+    app.get('/api/walkreuqests/open', async (req, res) => {
         try{
             const [rows] = await connection.query(`
                 SELECT
