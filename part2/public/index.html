@@ -71,8 +71,8 @@
         }
       } catch (err) {
         console.error('Error loading dogs:'. err);
-        const
-        tbody.innerHTML = `
+        const tbody = document.querySelector('#dogs-table tbody');
+        tbody.innerHTML = `<tr>
       }
     }
   </script>
