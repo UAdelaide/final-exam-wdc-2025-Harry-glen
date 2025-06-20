@@ -41,8 +41,10 @@ app.post('/login', async (req, res) => {
         return res.send('Invalid login');
     }
 
-    // save to session
+    // Save to session
     req.session.user = { id: user.user_id, role: user.role };
+
+    // Send
 })
 
 // Routes
