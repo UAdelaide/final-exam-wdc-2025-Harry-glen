@@ -123,7 +123,8 @@ async function main() {
                     CASE
                         WHEN COUNT(wr2.rating_id)=0 THEN NULL
                         ELSE ROUND(AVG(wr2.raitng),2)
-                        
+                    END                                 AS average_rating
+                    
 
             `);
             res.json(rows);
