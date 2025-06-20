@@ -22,7 +22,9 @@
         createApp({
             data(){
                 return {
-                    message: 'testing setup'
+                    message: 'Welcome to Dog walk service'
+                    dogImageUrl: ''
+                    
                 }
             }
         }).mount('#app');
