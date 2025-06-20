@@ -132,13 +132,12 @@ async function main() {
                         AND wr.status = 'completed
                 LEFT JOIN WalkRatings wr2
                     ON wr2.walker_id = u.user_id
-                    
-
+                WHERE u.role = 'walker'
+                GROUP BY u.username
             `);
             res.json(rows);
         } catch (err) {
             res.status(500).json({ error: err.message});
-
         }
     });
 }
