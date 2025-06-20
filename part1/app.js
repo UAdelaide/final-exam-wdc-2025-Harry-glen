@@ -111,6 +111,33 @@ async function main() {
     });
 
     // GET  /api/walkerreuqests/open
+        app.get('/api/walkerreuqests/open', async (req, res) => {
+        try{
+            const [rows] = await connection.query(`
+                SELECT
+                    u.username      AS owner_username,
+                    COUNT(wr.request_id)        AS completed_walks,
+                    COUNT(wr2.rating_id)        AS total_ratings,
+                    CASE
+                        WHEN COUNT(wr2.rating_id)=0 THEN NULL
+                        ELSE ROUND(AVG(wr2.raitng),2)
+                    END                                 AS average_rating
+                FROM Users u
+                LEFT JOIN WalkApplications wa
+                    ON wa.walker_id = u.user_id
+                LEFT JOIN WalkRequests wr
+                    ON wa.request_id = wr.request_id
+                        AND wr.status = 'completed
+                LEFT JOIN WalkRatings wr2
+                    ON wr2.walker_id = u.user_id
+                WHERE u.role = 'walker'
+                GROUP BY u.username
+            `);
+            res.json(rows);
+        } catch (err) {
+            res.status(500).json({ error: err.message});
+        }
+    });
 
     // GET /api/walkers/summary
     app.get('/api/walkers/summary', async (req, res) => {
