@@ -7,11 +7,7 @@
     <title>BAD dog walk service</title>
 </head>
 <body>
-    <h2>dog of the day<h2>
-    
-    <div id="app">
-        {{ message }}
-    </div>
+    <h2>{{ message }}<h2>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script>
