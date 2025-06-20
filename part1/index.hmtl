@@ -5,6 +5,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BAD dog walk service</title>
+    <style>
+    body {
+      background-color: #333;      /* dark grey */
+      color: ;                 /* white text */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1em;
+    }
+    button {
+      background: #555;
+      color: #fff;
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #666;
+    }
+  </style>
 </head>
 <body>
     <div id="app">
