@@ -166,5 +166,7 @@ async function main() {
         console.log('Server running on http://localhost:3000');
     });
 }
-main()
+main().catch(err => {
+    cosn
+})
 }
