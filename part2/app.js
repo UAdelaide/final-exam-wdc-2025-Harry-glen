@@ -61,8 +61,8 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app, post('/logout', (req, res) => {
-    req.session.destory(err => {
+app.post('/logout', (req, res) => {
+    req.session.destroy(err => {
         if (err) {
             console.error('Logout eror:', err);
             return res.status(500).send('Could not log out.');
