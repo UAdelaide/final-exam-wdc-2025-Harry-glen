@@ -63,8 +63,8 @@ app.get('/owner-dashboard', requireLogin, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
 });
 app.get('/walker-dashboard', requireLogin, (req, res) => {
-    if (req.session.user.role !== 'owner') return res.redirect('/');
-    res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
+    if (req.session.user.role !== 'walker') return res.redirect('/');
+    res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
 });
 
 // Export the app instead of listening here
