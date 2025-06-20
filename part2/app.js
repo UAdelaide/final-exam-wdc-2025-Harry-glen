@@ -78,7 +78,11 @@ app.get('/walker-dashboard', requireLogin, (req, res) => {
 });
 
 // Get only the logged-in owners dogs
-app.get('/api/users/dogs')
+app.get('/api/users/dogs', requireLogin, async (req, res) =>{
+    try {
+        const 
+    }
+})
 
 // Logout
 app.post('/logout', (req, res) => {
