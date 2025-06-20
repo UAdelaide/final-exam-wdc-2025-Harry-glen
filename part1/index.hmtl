@@ -7,7 +7,7 @@
     <title>BAD dog walk service</title>
     <style>
     body {
-      background-color:rgb(71, 71, 71);      /* dark grey */
+      background-color: #474747;      /* dark grey */
       color: #000000;                     /* black text */
       font-family: Arial, sans-serif;
       margin: 0;
