@@ -7,7 +7,7 @@ async function main() {
         host: 'localhost',
         user: 'root',
         password: '',
-        database: 'DogWalkService'
+        database: 'DogWalkService',
         multipleStatements: true
     });
 
