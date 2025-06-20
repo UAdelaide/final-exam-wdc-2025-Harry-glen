@@ -10,5 +10,6 @@ async function main() {
         database: 'DogWalkService'
     });
 
-    
+    await connection.query(`
+        `
 }
