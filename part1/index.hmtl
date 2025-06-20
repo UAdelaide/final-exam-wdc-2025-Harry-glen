@@ -32,8 +32,9 @@
     .dog-container {
         width: 100%
         text-align: random
-        
+        margin-top: 3em;
     }
+    .dog-container {
   </style>
 </head>
 <body>
