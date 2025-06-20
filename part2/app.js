@@ -3,6 +3,7 @@ const path = require('path');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
 require('dotenv').config();
+const db = require('./models/db');
 
 const app = express();
 
@@ -26,10 +27,10 @@ function requireLogin(req, res, next){
 
 // Handle the login form
 app.post('/login', async (req, res) => {
-    const { username, password } = req.body;
-    const [rows] = await require('./models/db').query(
+    const [rows] = await db.query(
         'SELECT user_id, role, password_hash FROM Users WHERE username = ?',
         [username]
+    );
     );
     if (!rows.length) {
         return res.send('Invalid login');
