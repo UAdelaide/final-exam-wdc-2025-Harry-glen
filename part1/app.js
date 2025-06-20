@@ -100,7 +100,8 @@ async function main() {
                     d.name  AS dog_name
                     d.size,
                     u.username AS owner_usernmae
-                    
+                FROM Dogs d
+                JOIN Users u ON d.owner_ = u.user_id
                 `)
         }
     })
