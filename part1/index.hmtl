@@ -47,7 +47,7 @@
         <h2>{{ message }}</h2>
         <button @click="fetchDog">button</button>
         <div class="dog-container" v-if="dogImageUrl">
-        
+            <img :src="dogImageUrl" />
         </div>
     </div>
 
