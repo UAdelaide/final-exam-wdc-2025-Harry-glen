@@ -26,13 +26,13 @@ VALUES (
     ),
     (
     (SELECT user_id FROM Users WHERE username='carol123'),
-    'dogname',
+    'Beast',
     'small'
     ),
     (
-    (SELECT user_id FROM Users WHERE username='name'),
-    'dogname',
-    'medium'
+    (SELECT user_id FROM Users WHERE username='dave234'),
+    'Tiny',
+    'large'
 );
 
 -- 5 walk requests
