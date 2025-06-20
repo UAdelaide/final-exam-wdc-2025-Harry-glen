@@ -70,9 +70,9 @@
           tbody.appendChild(tr);
         }
       } catch (err) {
-        console.error('Error loading dogs:'. err);
+        console.error('Error loading dogs:', err);
         const tbody = document.querySelector('#dogs-table tbody');
-        tbody.innerHTML = `<tr><td colspan="4" class="text-center text-danher">
+        tbody.innerHTML = `<tr><td colspan="4" class="text-center text-danger">
                             Could not load dogs</td></tr>`;
       }
     }
