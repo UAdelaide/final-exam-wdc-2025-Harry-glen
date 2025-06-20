@@ -82,13 +82,13 @@ app.get('/api/users/dogs', requireLogin, async (req, res) => {
     try {
         const ownerId = req.session.user.id;
         const [rows] = await db.query(
-            'SLECT dog_id, name FROM Dogs WHERE owner = ?',
+            'SeLECT dog_id, name FROM Dogs WHERE owner_id = ?',
             [ownerId]
         );
         res.json(rows);
     } catch (err) {
         console.error(err);
-        res.status(500).send('Sever error');
+        res.status(500).send('Server error');
     }
 });
 
