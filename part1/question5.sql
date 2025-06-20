@@ -67,8 +67,8 @@ VALUES(
     ),
     (
         (SELECT dog_id FROM Dogs WHERE name='Beast'),
-    'datetime',
-    1,
+    '2025-08-10 21:00:00',
+    120,
     'CBD',
     'cancelled'
     );
