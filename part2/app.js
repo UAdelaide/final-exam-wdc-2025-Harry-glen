@@ -61,20 +61,6 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app.post('/logout', (req, res) => {
-    req.session.destroy(err => {
-        if (err) {
-            console.error('Logout error:', err);
-            return res.status(500).send('Could not log out.');
-        }
-        // Clear teh session cookie
-        res.clearCookie('connect.sid');
-        // Redirect back to the login form
-        res.redirect('/');
-    });
-});
-
-
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
@@ -89,6 +75,20 @@ app.get('/owner-dashboard', requireLogin, (req, res) => {
 app.get('/walker-dashboard', requireLogin, (req, res) => {
     if (req.session.user.role !== 'walker') return res.redirect('/');
     res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
+});
+
+// Logout 
+app.post('/logout', (req, res) => {
+    req.session.destroy(err => {
+        if (err) {
+            console.error('Logout error:', err);
+            return res.status(500).send('Could not log out.');
+        }
+        // Clear teh session cookie
+        res.clearCookie('connect.sid');
+        // Redirect back to the login form
+        res.redirect('/');
+    });
 });
 
 // Export the app instead of listening here
