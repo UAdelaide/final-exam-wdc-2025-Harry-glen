@@ -26,7 +26,8 @@ function requireLogin(req, res, next){
 
 // Handle the login form
 app.post('/login', async (req, res) => {
-    const {u}
+    const { username, password } = req.body;
+    const [rows]
 })
 
 // Routes
