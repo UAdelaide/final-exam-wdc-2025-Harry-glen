@@ -67,7 +67,8 @@ app,post('/logout', (req, res) => {
             console.error('Logout eror:', err);
             return res.status(500).send('Could not log out.');
         }
-        
+        // Clear teh session cookie
+        res.clearCookie('connect.sid')
         }
     })
 })
