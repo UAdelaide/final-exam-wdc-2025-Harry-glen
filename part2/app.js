@@ -85,7 +85,10 @@ app.get('/api/users/dogs', requireLogin, async (req, res) =>{
             'SLECT dog_id, name FROM Dogs WHERE owener_id = ?',
             [ownerId]
         );
-        res.json
+        res.json(rows);
+    } catch (err) {
+        console.error(err)
+    }
     }
 })
 
@@ -104,4 +107,4 @@ app.post('/logout', (req, res) => {
 });
 
 // Export the app instead of listening here
-module.exports = app;
+modul
