@@ -31,11 +31,13 @@
     }
     .dog-container {
         width: 100%
-        text-align: random
+        text-align: random;
         margin-top: 3em;
     }
     .dog-container img{
-        max-widt:h 250%
+        max-width: 250%;
+        height: auto;
+        
     }
   </style>
 </head>
