@@ -87,10 +87,10 @@ app.get('/api/users/dogs', requireLogin, async (req, res) =>{
         );
         res.json(rows);
     } catch (err) {
-        console.error(err)
+        console.error(err);
+        res.status(500).send('Sever error');
     }
-    }
-})
+});
 
 // Logout
 app.post('/logout', (req, res) => {
@@ -107,4 +107,4 @@ app.post('/logout', (req, res) => {
 });
 
 // Export the app instead of listening here
-modul
+module.exports = app;
