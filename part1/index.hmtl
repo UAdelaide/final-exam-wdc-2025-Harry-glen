@@ -35,6 +35,7 @@
                     } catch (e){
                         console.error('Error fetching dog:', e)
                     }
+                }
             },
             mounted(){
                 this.fetchDog();
