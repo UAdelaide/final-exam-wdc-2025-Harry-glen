@@ -170,7 +170,7 @@ async function main() {
     });
 }
 
-main().catch(err => {
+main().catch((err) => {
     console.error('Failed to start app:', err);
     process.exit(1);
 });
