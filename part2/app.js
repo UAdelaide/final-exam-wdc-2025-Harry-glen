@@ -65,7 +65,9 @@ app,post('/logout', (req, res) => {
     req.session.destory(err => {
         if (err) {
             console.error('Logout eror:', err);
-            re
+            return res.status(500).send('Could not log out.');
+        }
+        
         }
     })
 })
