@@ -88,6 +88,7 @@ async function main() {
             120,
             'CBD',
             'cancelled'
+            )
         ON DUPLICATE KEY UPDATE request_id = request_id;
     `);
 
