@@ -23,6 +23,12 @@
     button:hover {
       background: #666;
     }
+    #app {
+      display: flex;
+      justify-content: space-between; /* push button to the other side */
+      align-items: center;
+      flex-wrap: wrap;
+    }
   </style>
 </head>
 <body>
