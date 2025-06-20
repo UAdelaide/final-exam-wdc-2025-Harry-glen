@@ -60,13 +60,15 @@ VALUES(
     ),
     (
         (SELECT dog_id FROM Dogs WHERE name='Tiny'),
-    'datetime',
+    '2025-06-10 09:30:00',
     1,
-    'location'
+    'location',
+    'open'
     ),
     (
         (SELECT dog_id FROM Dogs WHERE name='name'),
     'datetime',
     1,
     'location'
+    ''
     );
