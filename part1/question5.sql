@@ -52,9 +52,9 @@ VALUES(
     'accepted'
     ),
     (
-        (SELECT dog_id FROM Dogs WHERE name='name'),
-    'datetime',
-    1,
+        (SELECT dog_id FROM Dogs WHERE name='Roxy'),
+    'Golden Rd',
+    55,
     'location'
     ),
     (
