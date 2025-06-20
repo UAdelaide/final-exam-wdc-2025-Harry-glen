@@ -93,6 +93,10 @@ async function main() {
     const app = express();
 
     // GET /api/dogs
-    app.get('/api/dogs', async (r, res))
+    app.get('/api/dogs', async (req, res) => {
+        try{
+            const 
+        }
+    })
 
 }
