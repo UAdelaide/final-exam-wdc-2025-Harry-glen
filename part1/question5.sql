@@ -8,4 +8,5 @@ VALUES
     ('name', 'email', 'hashpass', 'role')
     ('name', 'email', 'hashpass', 'role')
 
--- 
+-- 5 dogs
+INSERT INTO Dogs (owner_id, name, size)
