@@ -12,11 +12,13 @@ async function main() {
     });
 
     await connection.query(`
+        SET FOREIGN_KEY_CHECKS = 0;
         TRUNCATE TABLE WalkRatings;
         TRUNCATE TABLE WalkApplications;
         TRUNCATE TABLE WalkRequests;
         TRUNCATE TABLE Dogs;
         TRUNCATE TABLE Users;
+        SET FOREIGN_KEY_CHECKS = 1;
     `);
 
     // seed data
