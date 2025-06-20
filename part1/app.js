@@ -128,7 +128,7 @@ async function main() {
                 LEFT JOIN WalkApplications wa
                     ON wa.walker_id = u.user_id
                 LEFT JOIN WalkRequests wr
-                    ON wa.walker_id = u.user_id
+                    ON wa.request_id = wr.user_id
                 LEFT
 
             `);
