@@ -82,7 +82,7 @@ app.get('/api/users/dogs', requireLogin, async (req, res) => {
     try {
         const ownerId = req.session.user.id;
         const [rows] = await db.query(
-            'SLECT dog_id, name FROM Dogs WHERE owener_id = ?',
+            'SLECT dog_id, name FROM Dogs WHERE owner = ?',
             [ownerId]
         );
         res.json(rows);
