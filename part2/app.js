@@ -92,8 +92,9 @@ app.get('/api/users/dogs', requireLogin, async (req, res) => {
     }
 });
 
+// 
 app.get('/api/users/me', requireLogin, async (req, res) => {
-    res.json({ id: req.session.user.id, role: req.session})
+    res.json({ id: req.session.user.id, role: req.session.user.role });
 });
 
 // Logout
