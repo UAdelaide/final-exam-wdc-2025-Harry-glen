@@ -4,7 +4,7 @@ VALUES
     ('alice123', 'alice@example.com', 'hashed123', 'owner')
     ('bobwalker', 'bob@example.com', 'hashed456', 'walker')
     ('carol123', 'carol@example.com', 'hashed789', 'owner')
-    ('harrywalker', 'harry@example.com', 'hashpass', 'role')
+    ('harrywalker', 'harry@example.com', 'hased987', 'walker')
     ('name', 'email', 'hashpass', 'role')
     ('name', 'email', 'hashpass', 'role')
 
