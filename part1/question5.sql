@@ -29,4 +29,4 @@ VALUES (
 );
 
 -- 5 wlak requests
-INSERT INTO WalkRequests(dog_id,)
+INSERT INTO WalkRequests(dog_id,requested_time, duration_minutes)
