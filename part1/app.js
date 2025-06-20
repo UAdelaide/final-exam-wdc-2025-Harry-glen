@@ -161,5 +161,6 @@ async function main() {
         }
     });
 
-    
+    // Start server
+    app.listen(3000, () =>{})
 }
