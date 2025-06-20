@@ -44,7 +44,8 @@ app.post('/login', async (req, res) => {
     // Save to session
     req.session.user = { id: user.user_id, role: user.role };
 
-    // Send
+    // Send to the right dashboard
+    if (user)
 })
 
 // Routes
