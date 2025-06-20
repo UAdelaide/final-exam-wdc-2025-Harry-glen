@@ -46,7 +46,7 @@ VALUES(
     ),
     (
     (SELECT dog_id FROM Dogs WHERE name='Bella'),
-    '2025-06-10 09:30:00 ',
+    '2025-06-10 09:30:00',
     45,
     'Beachside Ave',
     'accepted'
@@ -55,7 +55,7 @@ VALUES(
         (SELECT dog_id FROM Dogs WHERE name='Roxy'),
     'Golden Rd',
     55,
-    'location'
+    'Golden rd'
     ),
     (
         (SELECT dog_id FROM Dogs WHERE name='name'),
