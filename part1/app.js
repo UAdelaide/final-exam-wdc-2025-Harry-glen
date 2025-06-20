@@ -12,6 +12,11 @@ async function main() {
 
     await connection.query(`
         TRUNCATE TABLE WalkRatings;
+        TRUNCATE TABLE WalkApplications;
+        TRUNCATE TABLE WalkRequests;
+        TRUNCATE TABLE WalkRatings;
+        TRUNCATE TABLE WalkRatings;
+        TRUNCATE TABLE WalkRatings;
     `);
 
     // seed data
