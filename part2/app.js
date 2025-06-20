@@ -47,9 +47,10 @@ app.post('/login', async (req, res) => {
     // Send to the right dashboard
     if (user.role === 'owner'){
         return res.redirect('/owner-dashboard');
-    
+    } else {
+        return res.redirect('/walker-dashboard');
     }
-})
+});
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
