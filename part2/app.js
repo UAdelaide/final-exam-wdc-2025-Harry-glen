@@ -29,7 +29,10 @@ function requireLogin(req, res, next) {
 
 // Handle the login form
 app.post('/login', async (req, res) => {
+    console.log('body:', req.body);
     const { username, password } = req.body;
+    console.log('username:', username, 'password:', password);
+
 
     try {
         const [rows] = await db.query(
