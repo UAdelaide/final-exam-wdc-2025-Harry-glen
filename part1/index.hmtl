@@ -37,7 +37,8 @@
     .dog-container img{
         max-width: 250%;
         height: auto;
-        border-radius 17px;
+        border-radius: 17px;
+        box-shadow: 0 2px 6xp rgba(0,0,0,0.5);
     }
   </style>
 </head>
