@@ -46,7 +46,8 @@ app.post('/login', async (req, res) => {
 
     // Send to the right dashboard
     if (user.role === 'owner'){
-        return res.redirect()
+        return res.redirect('/owner-dashboard');
+    
     }
 })
 
