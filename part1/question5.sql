@@ -1,7 +1,7 @@
 -- 5 users
 INSERT INTO Users(username, email. password_hash, role)
 VALUES
-    ('name', 'email', 'hashpass', 'role')
+    ('alice123', 'alice@example.com', 'hashpass', 'role')
     ('name', 'email', 'hashpass', 'role')
     ('name', 'email', 'hashpass', 'role')
     ('name', 'email', 'hashpass', 'role')
