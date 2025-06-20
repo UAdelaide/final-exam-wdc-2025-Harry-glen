@@ -168,6 +168,5 @@ async function main() {
 }
 main().catch(err => {
     console.error('Failed to start app:', err);
-    pr
-})
-}
+    process.exit(1);
+});
