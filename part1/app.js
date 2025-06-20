@@ -19,7 +19,7 @@ async function main() {
             ('carol123', 'carol@example.com', 'hashed789', 'owner'),
             ('harrywalker', 'harry@example.com', 'hased987', 'walker'),
             ('dave234', 'dave@example.com', 'hased650', 'owner');
-        ON DUPLICTAE KEY UPDTAE
+        ON DUPLICTAE KEY UPDATE username = username;
     `);
 
     await connection.query(`
