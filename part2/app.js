@@ -20,7 +20,8 @@ app.use(session({
 
 // Helper to protect pages
 function requireLogin(req. res. next){
-    if (!req.session.user) return res.re
+    if (!req.session.user) return res.redirect('/');
+        next
 }
 
 // Routes
