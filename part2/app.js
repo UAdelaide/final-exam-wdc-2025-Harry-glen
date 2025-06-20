@@ -105,7 +105,7 @@ app.get('/api/dogs', async (req, res) => {
                     d.dog_id  AS dog_id,
                     d.name  AS dog_name,
                     d.size,
-                    u.use_id AS owner_id
+                    u.user_id AS owner_id
                 FROM Dogs d
                 JOIN Users u ON d.owner_id = u.user_id
             `);
