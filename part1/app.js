@@ -98,6 +98,9 @@ async function main() {
             const [rows] = await connection.query(`
                 SELECT
                     d.name  AS dog_name
+                    d.size,
+                    u.username AS owner_usernmae
+                    
                 `)
         }
     })
