@@ -13,32 +13,19 @@ INSERT INTO Dogs (owner_id, name, size)
 VALUES (
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
-    'medium'
-);
-VALUES (
+    'medium';
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
-    'medium'
-);
-VALUES (
+    'medium';
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
-    'medium'
-);
-VALUES (
+    'medium';
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
-    'medium'
-);
-VALUES (
+    'medium';
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
-    'medium'
-);
-VALUES (
-    (SELECT user_id FROM Users WHERE username='name'),
-    'dogname',
-    'medium'
+    'medium';
 );
 
 -- 5 wlak requests
