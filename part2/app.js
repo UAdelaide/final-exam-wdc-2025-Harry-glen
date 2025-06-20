@@ -97,10 +97,10 @@ app.get('/api/users/me', requireLogin, async (req, res) => {
     res.json({ id: req.session.user.id, role: req.session.user.role });
 });
 
-    // GET /api/dogs
-    app.get('/api/dogs', async (req, res) => {
-        try{
-            const [rows] = await connection.query(`
+// GET /api/dogs
+app.get('/api/dogs', async (req, res) => {
+    try {
+        const [rows] = await connection.query(`
                 SELECT
                     d.name  AS dog_name,
                     d.size,
@@ -108,12 +108,12 @@ app.get('/api/users/me', requireLogin, async (req, res) => {
                 FROM Dogs d
                 JOIN Users u ON d.owner_id = u.user_id
             `);
-            res.json(rows);
-        } catch (err) {
-            res.status(500).json({ error: err.message});
+        res.json(rows);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
 
-        }
-    });
+    }
+});
 
 // Logout
 app.post('/logout', (req, res) => {
