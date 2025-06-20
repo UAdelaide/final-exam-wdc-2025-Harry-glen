@@ -122,6 +122,7 @@ async function main() {
                     COUNT(wr2.rating_id)        AS total_ratings,
                     CASE
                         WHEN COUNT(wr2.rating_id)=0 THEN NULL
+                        ELSE ROUND(AVG(wr2.raitng),2)
                         
 
             `);
