@@ -64,7 +64,7 @@
           }
         }
 
-        // to get the current user 
+        // to get the current user
         async function getCurrentUser() {
             const res = await fetch('/api/user/me');
             if (!res.ok) throw new Error('Not logged in');
@@ -72,6 +72,7 @@
         }
 
         async function applyToWalk(requestId) {
+          
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
