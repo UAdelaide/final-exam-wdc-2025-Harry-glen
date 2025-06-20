@@ -104,7 +104,7 @@ async function main() {
                     d.size,
                     u.username AS owner_username
                 FROM Dogs d
-                JOIN Users u ON d.owner_ = u.user_id
+                JOIN Users u ON d.owner_id = u.user_id
             `);
             res.json(rows);
         } catch (err) {
