@@ -48,7 +48,8 @@ async function main() {
             (SELECT user_id FROM Users WHERE username='dave234'),
             'Tiny',
             'large'
-    );
+            )
+        ON DUPLICATE KEY UPDATE name = username;
     `);
 
     await connection.query(`
