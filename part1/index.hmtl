@@ -30,8 +30,7 @@
       flex-wrap: wrap;
     }
     .dog-container {
-        width: 100%
-        text-align: random;
+        text-align: right;
         margin-top: 3em;
     }
     .dog-container img{
