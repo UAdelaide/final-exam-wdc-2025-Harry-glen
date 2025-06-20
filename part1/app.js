@@ -120,6 +120,10 @@ async function main() {
                     u.username      AS owner_username,
                     COUNT(wr.request_id)        AS completed_walks,
                     COUNT(wr2.rating_id)        AS total_ratings,
+                    CASE
+                        WHEN COUNT(wr2.rating_id)=0 THEN NULL
+                        
+
             `);
             res.json(rows);
         } catch (err) {
