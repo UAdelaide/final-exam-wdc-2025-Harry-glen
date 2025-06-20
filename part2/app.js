@@ -9,7 +9,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Session setup
@@ -20,8 +20,8 @@ app.use(session({
 }));
 
 // Helper to protect pages
-function requireLogin(req, res, next){
-    if (!req.session.user){
+function requireLogin(req, res, next) {
+    if (!req.session.user) {
         return res.redirect('/');
     }
     next();
@@ -31,7 +31,7 @@ function requireLogin(req, res, next){
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
-    try{
+    try {
         const [rows] = await db.query(
             'SELECT user_id, role, password_hash FROM Users WHERE username = ?',
             [username]
@@ -50,11 +50,15 @@ app.post('/login', async (req, res) => {
         req.session.user = { id: user.user_id, role: user.role };
 
         // Send to the right dashboard
-        if (user.role === 'owner'){
+        if (user.role === 'owner') {
             return res.redirect('/owner-dashboard');
         }
         return res.redirect('/walker-dashboard');
+    } catch (err) {
+        console.error(err);
+        return res.status(500).send('Server error');
     }
+}
 });
 
 
