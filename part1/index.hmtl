@@ -27,13 +27,14 @@
                 }
             },
             methods: {
-                try {
-                    const res = await fetch('https://dog.ceo/api/breeds/image/random');
-                    const data = await res.json();
-                    this.dogImageUrl = data.message;
-                } catch (e){
-                    console.error('Error fetching dog:', e)
-                }
+                async fetchDog(){
+                    try {
+                        const res = await fetch('https://dog.ceo/api/breeds/image/random');
+                        const data = await res.json();
+                        this.dogImageUrl = data.message;
+                    } catch (e){
+                        console.error('Error fetching dog:', e)
+                    }
             },
             mounted(){
                 this.fetchDog();
