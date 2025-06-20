@@ -28,20 +28,12 @@
           <!-- Chaning the dog select option-->
           <div class="mb-3">
             <label for="dog_id" class="form-label">Select dog</label>
-            <select
-              id="dog_id"
-              v-model="form.dog_id"
-              class="form-select bg-warning-subtle"
-              required
-            >
+            <select id="dog_id" v-model="form.dog_id" class="form-select bg-warning-subtle" required>
               <option value="" disabled>-- Choose a dog --</option>
-              <option
-                v-for="dog in dogs"
-                :key="dog.dog_id"
-                :value="dog.dog_id"
-              >
-            </option>
-          </select>
+              <option v-for="dog in dogs" :key="dog.dog_id" :value="dog.dog_id">
+                {{ dog.name }}
+              </option>
+            </select>
           </div>
           <div class="mb-3">
             <label class="form-label">Requested Date & Time</label>
