@@ -117,12 +117,8 @@ async function main() {
         try{
             const [rows] = await connection.query(`
                 SELECT
-                u.username AS owner_username
-                    d.name  AS dog_name
-                    d.size,
                     u.username AS owner_username
-                FROM Dogs d
-                JOIN Users u ON d.owner_ = u.user_id
+                    COUNT(wr2.rating_id)
             `);
             res.json(rows);
         } catch (err) {
