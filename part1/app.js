@@ -115,7 +115,10 @@ async function main() {
         try{
             const [rows] = await connection.query(`
                 SELECT
-                    wr.request)
+                    wr.request_id
+                    d,name      AS dog_name
+                    wr.requested_time,
+                    wr
             `);
             res.json(rows);
         } catch (err) {
