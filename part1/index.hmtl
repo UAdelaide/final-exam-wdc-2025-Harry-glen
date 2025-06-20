@@ -46,8 +46,8 @@
     <div id="app">
         <h2>{{ message }}</h2>
         <button @click="fetchDog">button</button>
-        <div v-if="dogImageUrl" style="margin-top: 1em;">
-            <img :src="dogImageUrl" style="max-width: 300%; height: auto;" />
+        <div class="dog-container" v-if="dogImageUrl">
+        
         </div>
     </div>
 
