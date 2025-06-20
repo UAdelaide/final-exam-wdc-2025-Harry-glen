@@ -99,7 +99,7 @@ async function main() {
                 SELECT
                     d.name  AS dog_name
                     d.size,
-                    u.username AS owner_usernmae
+                    u.username AS owner_username
                 FROM Dogs d
                 JOIN Users u ON d.owner_ = u.user_id
             `);
@@ -110,16 +110,17 @@ async function main() {
         }
     });
 
-    // GET  /api/walkers/open
+    // GET  /api/walkerreuqests/open
 
     // GET /api/walkers/summary
     app.get('/api/walkers/summary', async (req, res) => {
         try{
             const [rows] = await connection.query(`
                 SELECT
+                u.username AS owner_username
                     d.name  AS dog_name
                     d.size,
-                    u.username AS owner_usernmae
+                    u.username AS owner_username
                 FROM Dogs d
                 JOIN Users u ON d.owner_ = u.user_id
             `);
