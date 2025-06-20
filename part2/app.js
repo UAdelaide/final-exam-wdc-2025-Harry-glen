@@ -31,7 +31,6 @@ app.post('/login', async (req, res) => {
         'SELECT user_id, role, password_hash FROM Users WHERE username = ?',
         [username]
     );
-    );
     if (!rows.length) {
         return res.send('Invalid login');
     }
