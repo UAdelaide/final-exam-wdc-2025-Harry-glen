@@ -37,7 +37,7 @@
     .dog-container img{
         max-width: 250%;
         height: auto;
-        
+        border-radius 17px;
     }
   </style>
 </head>
