@@ -36,7 +36,7 @@
               <option value="" disabled>-- Choose a dog --</option>
               <option
                 v-for="dog in dogs"
-                
+                :key="dog.dog_id"
           </select>
           </div>
           <div class="mb-3">
