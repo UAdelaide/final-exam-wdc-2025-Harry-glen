@@ -118,7 +118,8 @@ async function main() {
             const [rows] = await connection.query(`
                 SELECT
                     u.username      AS owner_username,
-                    COUNT(wr2.rating_id)        AS
+                    COUNT(wr2.rating_id)        AS completed_walks,
+                    COUNT(wr2.rating_id)        AS completed_walks,
             `);
             res.json(rows);
         } catch (err) {
