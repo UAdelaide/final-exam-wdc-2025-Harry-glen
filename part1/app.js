@@ -18,8 +18,8 @@ async function main() {
             ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
             ('carol123', 'carol@example.com', 'hashed789', 'owner'),
             ('harrywalker', 'harry@example.com', 'hased987', 'walker'),
-            ('dave234', 'dave@example.com', 'hased650', 'owner');
-        ON DUPLICTAE KEY UPDATE username = username;
+            ('dave234', 'dave@example.com', 'hased650', 'owner')
+        ON DUPLICATE KEY UPDATE username = username;
     `);
 
     await connection.query(`
