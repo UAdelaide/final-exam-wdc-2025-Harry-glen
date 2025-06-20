@@ -33,7 +33,10 @@
               class="form-select bg-warning-subtle"
               required
             >
-              <option value="" disabled>-- choose a dog --</option>
+              <option value="" disabled>-- Choose a dog --</option>
+              <option
+                v-for="dog in dogs"
+                
           </select>
           </div>
           <div class="mb-3">
