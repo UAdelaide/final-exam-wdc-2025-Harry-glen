@@ -15,3 +15,6 @@ VALUES (
     'dogname',
     'medium'
 );
+
+-- 5 wlak requests
+INSERT INTO 
