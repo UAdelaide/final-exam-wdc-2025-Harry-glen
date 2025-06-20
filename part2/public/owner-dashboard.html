@@ -25,7 +25,7 @@
       </div>
       <div class="card-body">
         <form @submit.prevent="submitWalkRequest">
-          <!-- Chaning the dog select option to be -->
+          <!-- Chaning the dog select option-->
           <div class="mb-3">
             <label for="dog_id" class="form-label">Select dog</label>
             <select
@@ -38,6 +38,9 @@
               <option
                 v-for="dog in dogs"
                 :key="dog.dog_id"
+                :value="dog.dog_id"
+              >
+            </option>
           </select>
           </div>
           <div class="mb-3">
