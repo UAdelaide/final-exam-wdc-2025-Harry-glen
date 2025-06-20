@@ -79,7 +79,7 @@ app.get('/walker-dashboard', requireLogin, (req, res) => {
 
 // Logout
 app.post('/logout', (req, res) => {
-    req.session.destroy(err => {
+    req.session.destroy((err) => {
         if (err) {
             console.error('Logout error:', err);
             return res.status(500).send('Could not log out.');
