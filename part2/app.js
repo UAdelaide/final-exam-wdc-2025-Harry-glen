@@ -95,7 +95,7 @@ app.get('/api/users/dogs', requireLogin, async (req, res) => {
 // Get the user logged id
 app.get('/api/users/me', requireLogin, async (req, res) => {
     res.json({ id: req.session.user.id, role: req.session.user.role });
-});s
+});
 
 // GET /api/dogs
 app.get('/api/dogs', async (req, res) => {
