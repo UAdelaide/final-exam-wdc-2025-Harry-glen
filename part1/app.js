@@ -113,12 +113,12 @@ async function main() {
         }
     });
 
-    // GET  /api/walkereuqests/open
-        app.get('/api/walkereuqests/open', async (req, res) => {
+    // GET  /api/walkreuqests/open
+        app.get('/api/walkreuqests/open', async (req, res) => {
         try{
             const [rows] = await connection.query(`
                 SELECT
-                    wr.request_id
+                    wr.request_id,
                     d.name      AS dog_name,
                     wr.requested_time,
                     wr.duration_minutes,
