@@ -140,19 +140,19 @@ async function main() {
         try{
             const [rows] = await connection.query(`
                 SELECT
-                    u.username      AS owner_username,
+                    u.username                  AS walker_username,
                     COUNT(wr.request_id)        AS completed_walks,
                     COUNT(wr2.rating_id)        AS total_ratings,
                     CASE
                         WHEN COUNT(wr2.rating_id)=0 THEN NULL
-                        ELSE ROUND(AVG(wr2.raitng),2)
+                        ELSE ROUND(AVG(wr2.rating),2)
                     END                                 AS average_rating
                 FROM Users u
                 LEFT JOIN WalkApplications wa
                     ON wa.walker_id = u.user_id
                 LEFT JOIN WalkRequests wr
                     ON wa.request_id = wr.request_id
-                        AND wr.status = 'completed
+                        AND wr.status = 'completed'
                 LEFT JOIN WalkRatings wr2
                     ON wr2.walker_id = u.user_id
                 WHERE u.role = 'walker'
