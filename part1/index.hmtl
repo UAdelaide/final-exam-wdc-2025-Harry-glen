@@ -17,6 +17,9 @@
 
         createApp({
             data(){
-                
+                return {
+                    message: 'testing setup'
+                    
+                }
             }
         })
