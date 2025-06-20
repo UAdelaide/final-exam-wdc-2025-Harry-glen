@@ -71,4 +71,4 @@ VALUES(
     120,
     'CBD',
     'cancelled'
-    );
+);
