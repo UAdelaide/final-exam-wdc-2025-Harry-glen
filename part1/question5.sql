@@ -45,3 +45,26 @@ VALUES(
     'location'
     ),
     (
+    (SELECT dog_id, FROM Dogs WHERE name='name')
+    'datetime',
+    1,
+    'location'
+    ),
+    (
+        (SELECT dog_id, FROM Dogs WHERE name='name')
+    'datetime',
+    1,
+    'location'
+    ),
+    (
+        (SELECT dog_id, FROM Dogs WHERE name='name')
+    'datetime',
+    1,
+    'location'
+    ),
+    (
+        (SELECT dog_id, FROM Dogs WHERE name='name')
+    'datetime',
+    1,
+    'location'
+    );
