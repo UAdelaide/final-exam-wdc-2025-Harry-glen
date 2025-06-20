@@ -12,7 +12,9 @@ app.use(express.urlencoded({ extended: false}));
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Session setup
-
+app.use(session({
+    
+}))
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
