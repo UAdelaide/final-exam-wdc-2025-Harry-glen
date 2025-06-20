@@ -8,7 +8,8 @@
 </head>
 <body>
     <h2>{{ message }}<h2>
-    <button @click="fetchDog">
+    <button @click="fetchDog">button</button>
+    <div v-if="dogImageUrl
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script>
