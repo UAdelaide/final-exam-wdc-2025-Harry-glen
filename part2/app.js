@@ -60,8 +60,12 @@ app.use('/api/users', userRoutes);
 // Protect dashbaords
 app.get('/owner-dashboard', requireLogin, (req, res) => {
     if (req.session.user.role !== 'owner') return res.redirect('/');
-    res.sendFile(path.join(__dirname, 'public', 'owner'))
-})
+    res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
+});
+app.get('/walker-dashboard', requireLogin, (req, res) => {
+    if (req.session.user.role !== 'owner') return res.redirect('/');
+    res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
+});
 
 // Export the app instead of listening here
 module.exports = app;
