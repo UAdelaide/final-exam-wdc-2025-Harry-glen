@@ -77,7 +77,8 @@ app.get('/walker-dashboard', requireLogin, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
 });
 
-
+// Get only the logged-in owners dogs
+app.get('/api/users/dogs')
 
 // Logout
 app.post('/logout', (req, res) => {
