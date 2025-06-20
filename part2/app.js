@@ -27,7 +27,9 @@ function requireLogin(req, res, next){
 // Handle the login form
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
-    const [rows]
+    const [rows] = await require('./models/db').query(
+        
+    )
 })
 
 // Routes
