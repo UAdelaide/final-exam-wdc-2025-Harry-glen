@@ -29,7 +29,8 @@
             methods: {
                 try {
                     const res = await fetch('https://dog.ceo/api/breeds/image/random');
-                    con
+                    const data = await res.json();
+                    this.dogImageUrl
                 }
             }
         }).mount('#app');
