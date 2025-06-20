@@ -120,7 +120,9 @@ async function main() {
                     wr.requested_time,
                     wr.duration_minutes,
                     wr.location,
-                    u
+                    u.username      AS owner_username
+                FROM WalkRequests wr
+                
             `);
             res.json(rows);
         } catch (err) {
