@@ -68,10 +68,11 @@ app,post('/logout', (req, res) => {
             return res.status(500).send('Could not log out.');
         }
         // Clear teh session cookie
-        res.clearCookie('connect.sid')
-        }
-    })
-})
+        res.clearCookie('connect.sid');
+        // Redirect back to the login form
+        res.redirect('/');
+    });
+});
 
 
 // Routes
