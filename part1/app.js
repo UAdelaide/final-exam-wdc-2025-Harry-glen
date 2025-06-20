@@ -169,6 +169,7 @@ async function main() {
         console.log('Server running on http://localhost:3000');
     });
 }
+
 main().catch(err => {
     console.error('Failed to start app:', err);
     process.exit(1);
