@@ -24,9 +24,9 @@
                 return {
                     message: 'Welcome to Dog walk service'
                     dogImageUrl: ''
-                    
                 }
-            }
+            },
+            methods: {}
         }).mount('#app');
     </script>
 </body>
