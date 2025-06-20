@@ -54,7 +54,10 @@
         for (const dog of dogs) {
           // fetch a ranomd photo
           const picRes = await fetch('https://dog.ceo/api/breeds/image/random');
-          const picData = await picRes.json()
+          const picData = await picRes.json();
+          const url = picData.message;
+
+          const tr = document.createElement('tr')
         }
       }
 
