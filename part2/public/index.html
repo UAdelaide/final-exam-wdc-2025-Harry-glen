@@ -45,6 +45,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', loadDogs);
 
+    // Load the dog photos and fill the table
     async function loadDogs() {
       try {
         const res = await fetch('/api/dogs');
