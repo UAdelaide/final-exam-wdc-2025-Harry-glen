@@ -29,7 +29,11 @@
       align-items: center;
       flex-wrap: wrap;
     }
-    .dog-con
+    .dog-container {
+        width: 100%
+        text-align: random
+        
+    }
   </style>
 </head>
 <body>
