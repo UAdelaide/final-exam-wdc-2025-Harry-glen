@@ -59,7 +59,8 @@ app.use('/api/users', userRoutes);
 
 // Protect dashbaords
 app.get('/owner-dashboard', requireLogin, (req, res) => {
-    if (req.session.user.role !== 'owner')
+    if (req.session.user.role !== 'owner') return res.redirect('/');
+    res.sendFile(path.)
 })
 
 // Export the app instead of listening here
