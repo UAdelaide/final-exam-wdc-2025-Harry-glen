@@ -28,7 +28,7 @@ function requireLogin(req, res, next){
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     const [rows] = await require('./models/db').query(
-        'SELECT user_id, role, password_has FROM Users WHERE username = ?',
+        'SELECT user_id, role, password_hash FROM Users WHERE username = ?',
         [username]
     );
     if (!rows.length) {
@@ -36,7 +36,7 @@ app.post('/login', async (req, res) => {
     }
 
     const user = rows[0];
-    const match = await bcrypt.compare(password, user.password_has);
+    const match = await bcrypt.compare(password, user.password_hash);
     if (!match) {
         return res.send('Invalid login');
     }
