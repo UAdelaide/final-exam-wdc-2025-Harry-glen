@@ -61,7 +61,9 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app,post('/logout', )
+app,post('/logout', (req, res) => {
+    req.session.destory(err)
+})
 
 
 // Routes
