@@ -8,12 +8,12 @@
 </head>
 <body>
     <div id="app">
-        {{ messgae }}
+        {{ message }}
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script>
-        const { createApp } = vue;
+        const { createApp } = Vue;
 
         createApp({
             data(){
@@ -21,7 +21,7 @@
                     message: 'testing setup'
                 }
             }
-        }).mount('#app);
+        }).mount('#app');
     </script>
 </body>
 </html>
