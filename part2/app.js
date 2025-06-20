@@ -32,29 +32,31 @@ app.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
     try{
-    const [rows] = await db.query(
-        'SELECT user_id, role, password_hash FROM Users WHERE username = ?',
-        [username]
-    );
-    if (!rows.length) {
-        return res.send('Invalid login');
-    }
+        const [rows] = await db.query(
+            'SELECT user_id, role, password_hash FROM Users WHERE username = ?',
+            [username]
+        );
+        if (!rows.length) {
+            return res.send('Invalid login');
+        }
 
-    const user = rows[0];
-    const match = await bcrypt.compare(password, user.password_hash);
-    if (!match) {
-        return res.send('Invalid login');
-    }
+        const user = rows[0];
+        const match = await bcrypt.compare(password, user.password_hash);
+        if (!match) {
+            return res.send('Invalid login');
+        }
 
-    // Save to session
-    req.session.user = { id: user.user_id, role: user.role };
+        // Save to session
+        req.session.user = { id: user.user_id, role: user.role };
 
-    // Send to the right dashboard
-    if (user.role === 'owner'){
-        return res.redirect('/owner-dashboard');
+        // Send to the right dashboard
+        if (user.role === 'owner'){
+            return res.redirect('/owner-dashboard');
+        }
+        return res.redirect('/walker-dashboard');
     }
-    return res.redirect('/walker-dashboard');
 });
+
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
