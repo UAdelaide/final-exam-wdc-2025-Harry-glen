@@ -48,7 +48,10 @@
       try {
         const res = await fetch('/api/dogs');
         const dogs = await res.json();
-        const tbody = document.querySelector('#dogs-table tbody')
+        const tbody = document.querySelector('#dogs-table tbody');
+        tbody.innerHTML ='';
+
+        
       }
 
     }
