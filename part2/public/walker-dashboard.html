@@ -64,7 +64,7 @@
           }
         }
 
-        // to get the current user
+        // To get the current user
         async function getCurrentUser() {
             const res = await fetch('/api/user/me');
             if (!res.ok) throw new Error('Not logged in');
@@ -84,7 +84,7 @@
             const result = await res.json();
 
             if (!res.ok) throw new Error(result.error || 'Application failed');
-            
+
             message.value = result.message;
             error.value = '';
             await loadWalkRequests();
@@ -95,7 +95,7 @@
         }
 
         onMounted(() => {
-          getCurrentUser();
+          getCurrentUser(); // added
           loadWalkRequests();
         });
 
