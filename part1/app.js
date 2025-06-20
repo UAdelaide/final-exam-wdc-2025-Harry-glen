@@ -110,6 +110,8 @@ async function main() {
         }
     });
 
+    // GET  /api/walkers/open
+
     // GET /api/walkers/summary
     app.get('/api/walkers/summary', async (req, res) => {
         try{
