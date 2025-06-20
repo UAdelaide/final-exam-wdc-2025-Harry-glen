@@ -41,5 +41,7 @@ INSERT INTO WalkRequests(dog_id, requested_time, duration_minutes, location, sta
 VALUES(
     (SELECT dog_id, FROM Dogs WHERE name='name')
     'datetime',
-    
-    )
+    1,
+    'location'
+    ),
+    (
