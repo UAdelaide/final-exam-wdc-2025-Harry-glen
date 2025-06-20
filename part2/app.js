@@ -28,7 +28,8 @@ function requireLogin(req, res, next){
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     const [rows] = await require('./models/db').query(
-        'SELECT user_id, role, password_has FROM '
+        'SELECT user_id, role, password_has FROM Users WHERE username = ?',
+        
     )
 })
 
