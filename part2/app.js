@@ -34,6 +34,9 @@ app.post('/login', async (req, res) => {
     if (!rows.length) {
         return res.send('Invalid login');
     }
+
+    const user = rows[0];
+    const match = await bcrypt.compare
 })
 
 // Routes
