@@ -58,7 +58,9 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 // Protect dashbaords
-app.get('')
+app.get('/owner-dashboard', requireLogin, (req, res) => {
+    if 
+})
 
 // Export the app instead of listening here
 module.exports = app;
