@@ -92,6 +92,8 @@ app.get('/api/users/dogs', requireLogin, async (req, res) => {
     }
 });
 
+a[[.get('/api')]]
+
 // Logout
 app.post('/logout', (req, res) => {
     req.session.destroy((err) => {
