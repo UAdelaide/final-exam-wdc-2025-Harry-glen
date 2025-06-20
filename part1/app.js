@@ -8,15 +8,15 @@ async function main() {
         user: 'root',
         password: '',
         database: 'DogWalkService'
+        multipleStatements: true
     });
 
     await connection.query(`
         TRUNCATE TABLE WalkRatings;
         TRUNCATE TABLE WalkApplications;
         TRUNCATE TABLE WalkRequests;
-        TRUNCATE TABLE WalkRatings;
-        TRUNCATE TABLE WalkRatings;
-        TRUNCATE TABLE WalkRatings;
+        TRUNCATE TABLE Dogs;
+        TRUNCATE TABLE Users;
     `);
 
     // seed data
