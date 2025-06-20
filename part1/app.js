@@ -124,7 +124,8 @@ async function main() {
                         WHEN COUNT(wr2.rating_id)=0 THEN NULL
                         ELSE ROUND(AVG(wr2.raitng),2)
                     END                                 AS average_rating
-                    
+                FROM Users u
+                LEFt JOIN WalkAPplicatio
 
             `);
             res.json(rows);
