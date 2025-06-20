@@ -102,7 +102,9 @@ async function main() {
                     u.username AS owner_usernmae
                 FROM Dogs d
                 JOIN Users u ON d.owner_ = u.user_id
-                `)
+            `);
+            res.json(rows);
+        }
         }
     })
 
