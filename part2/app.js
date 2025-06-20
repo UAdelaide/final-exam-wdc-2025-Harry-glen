@@ -77,6 +77,8 @@ app.get('/walker-dashboard', requireLogin, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
 });
 
+
+
 // Logout
 app.post('/logout', (req, res) => {
     req.session.destroy((err) => {
