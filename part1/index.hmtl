@@ -19,7 +19,7 @@
             data(){
                 return {
                     message: 'testing setup'
-                    
                 }
             }
-        })
+        }).mount('#app);
+        
