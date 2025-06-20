@@ -125,7 +125,9 @@ async function main() {
                         ELSE ROUND(AVG(wr2.raitng),2)
                     END                                 AS average_rating
                 FROM Users u
-                LEFt JOIN WalkAPplicatio
+                LEFT JOIN WalkApplications wa
+                    ON wa.walker_id = u.user_id
+                LEFT
 
             `);
             res.json(rows);
