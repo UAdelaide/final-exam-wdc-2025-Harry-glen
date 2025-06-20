@@ -110,6 +110,21 @@ async function main() {
         }
     });
 
-    //
+    // GET /api/walkers/summary
+    app.get('/api/walkers/summary', async (req, res) => {
+        try{
+            const [rows] = await connection.query(`
+                SELECT
+                    d.name  AS dog_name
+                    d.size,
+                    u.username AS owner_usernmae
+                FROM Dogs d
+                JOIN Users u ON d.owner_ = u.user_id
+            `);
+            res.json(rows);
+        } catch (err) {
+            res.status(500).json({ error: err.message});
 
+        }
+    });
 }
