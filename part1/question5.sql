@@ -56,7 +56,7 @@ VALUES(
     '2025-06-10 09:30:00',
     55,
     'Golden Rd',
-    ''
+    'com'
     ),
     (
         (SELECT dog_id FROM Dogs WHERE name='name'),
