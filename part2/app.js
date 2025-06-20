@@ -37,7 +37,9 @@ app.post('/login', async (req, res) => {
 
     const user = rows[0];
     const match = await bcrypt.compare(password, user.password_has);
-    
+    if (!match) {
+        return res.send()
+    }
 })
 
 // Routes
