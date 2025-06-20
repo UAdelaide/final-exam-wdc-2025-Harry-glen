@@ -81,7 +81,7 @@ app.get('/walker-dashboard', requireLogin, (req, res) => {
 app.get('/api/users/dogs', requireLogin, async (req, res) =>{
     try {
         const ownerId = req.session.user.id;
-        const 
+        const [rows] = awair db.query()
     }
 })
 
