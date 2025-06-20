@@ -13,19 +13,24 @@ INSERT INTO Dogs (owner_id, name, size)
 VALUES (
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
-    'medium';
+    'medium'
+),
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
-    'medium';
+    'medium'
+),
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
-    'medium';
+    'medium'
+),
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
-    'medium';
+    'medium'
+),
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
-    'medium';
+    'medium'
+),
 );
 
 -- 5 walk requests
