@@ -92,7 +92,9 @@ app.get('/api/users/dogs', requireLogin, async (req, res) => {
     }
 });
 
-app.get('/api/users/me'. requireLogin, (r))
+app.get('/api/users/me', requireLogin, async (req, res) => {
+
+});
 
 // Logout
 app.post('/logout', (req, res) => {
