@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql2/promise');
 
 async function main() {
-
+    // connect
     const connection = await mysql.createConnection({
         host:   'localhost',
         user:   'root',
@@ -10,6 +10,7 @@ async function main() {
         database: 'DogWalkService'
     });
 
+    // seed data
     await connection.query(`
         INSERT INTO Users(username, email, password_hash, role)
         VALUES
@@ -88,6 +89,7 @@ async function main() {
         );
     `);
 
+    // set up express
     const app = express();
 
 
