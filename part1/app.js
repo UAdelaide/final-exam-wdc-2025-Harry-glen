@@ -104,6 +104,8 @@ async function main() {
                 JOIN Users u ON d.owner_ = u.user_id
             `);
             res.json(rows);
+        } catch (err) {
+            res.status(500)
         }
         }
     })
