@@ -18,7 +18,8 @@ app.use(session({
     saveUninitialized: false
 }));
 
-
+// Helper to protect pages
+function requireLogin(req. res. next)
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
