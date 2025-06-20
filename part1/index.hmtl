@@ -32,7 +32,7 @@
                     const data = await res.json();
                     this.dogImageUrl = data.message;
                 } catch (e){
-                    
+                    console.error('Error fe)
                 }
             }
         }).mount('#app');
