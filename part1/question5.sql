@@ -15,6 +15,12 @@ VALUES (
     'dogname',
     'medium'
     ),
+    (
+    (SELECT user_id FROM Users WHERE username='name'),
+    'dogname',
+    'medium'
+    ),
+    (
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
     'medium'
@@ -23,10 +29,7 @@ VALUES (
     'dogname',
     'medium'
     ),
-    (SELECT user_id FROM Users WHERE username='name'),
-    'dogname',
-    'medium'
-    ),
+    (
     (SELECT user_id FROM Users WHERE username='name'),
     'dogname',
     'medium'
